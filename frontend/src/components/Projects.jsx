@@ -15,8 +15,37 @@ const Projects = () => {
         setProjects(response.data.data);
         setLoading(false);
       } catch (err) {
-        console.error("Error fetching projects:", err);
-        setError('Failed to load projects.');
+        console.error("Error fetching projects, using fallback data:", err);
+        // Fallback data for static hosting (like GitHub Pages) where backend is not running
+        setProjects([
+          {
+            id: 1,
+            title: 'E-Commerce Platform',
+            description: 'A full-stack e-commerce solution with payment processing and user authentication.',
+            techStack: 'React, Node.js, Express, MongoDB, Stripe',
+            imageUrl: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+            projectUrl: '#',
+            githubUrl: '#'
+          },
+          {
+            id: 2,
+            title: 'Task Management Dashboard',
+            description: 'A beautifully designed dashboard for managing team projects and personal tasks with drag-and-drop features.',
+            techStack: 'Vue.js, Firebase, Tailwind CSS',
+            imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+            projectUrl: '#',
+            githubUrl: '#'
+          },
+          {
+            id: 3,
+            title: 'Weather App',
+            description: 'Real-time weather tracking application using third-party APIs with location services.',
+            techStack: 'React Native, OpenWeather API',
+            imageUrl: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
+            projectUrl: '#',
+            githubUrl: '#'
+          }
+        ]);
         setLoading(false);
       }
     };
