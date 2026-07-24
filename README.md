@@ -2,6 +2,11 @@
 
 A beautiful, responsive, and full-stack personal portfolio website built with React, Node.js, Express, and SQLite.
 
+## Live Demo
+
+👀 **Check out how the frontend looks live here:** [https://keshavv91.github.io/portfolio-website](https://keshavv91.github.io/portfolio-website)  
+*(Note: Because this is hosted on GitHub Pages, the backend is not actively running, but the frontend will gracefully display a set of beautiful fallback dummy projects!)*
+
 ## Features
 
 - **Modern UI:** Built with glassmorphism effects, a sleek dark mode, and smooth scrolling.
